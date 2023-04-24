@@ -117,7 +117,7 @@ const RentModal = () => {
    }, [step])
 
    let bodyContent = (
-      <div className='flex flex-col gap=8'>
+      <div className='flex flex-col gap-8'>
          <Heading
             title="Which of these best describes your place?"
             subtitle="Pick a category"
