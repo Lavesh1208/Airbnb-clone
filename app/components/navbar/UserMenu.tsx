@@ -1,8 +1,8 @@
 'use client'
 
 import useRentModal from '@/app/hooks/useRentModal'
-import useRegisterModal from '@/app/hooks/userRegisterModal'
-import useLoginModal from '@/app/hooks/userLoginModal'
+import useRegisterModal from '@/app/hooks/useRegisterModal'
+import useLoginModal from '@/app/hooks/useLoginModal'
 
 import { signOut } from 'next-auth/react'
 import { SafeUser } from '@/app/types'
@@ -36,7 +36,7 @@ const UserMenu: React.FC<UserMenuProps> = ({
       }
 
       rentModal.onOpen();
-   },[currentUser, loginModal, rentModal])
+   }, [currentUser, loginModal, rentModal])
 
    return (
       <div className="relative">

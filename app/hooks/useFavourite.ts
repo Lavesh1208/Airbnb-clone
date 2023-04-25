@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 
 import { SafeUser } from "../types";
 
-import useLoginModal from "./userLoginModal";
+import useLoginModal from "./useLoginModal";
 
 interface IUseFavourite {
    listingId: string;
@@ -21,7 +21,7 @@ const useFavourite = ({
 
    const hasFavourited = useMemo(() => {
       const list = currentUser?.favouriteIds || [];
-      
+
       return list.includes(listingId);
    }, [currentUser, listingId]);
 
