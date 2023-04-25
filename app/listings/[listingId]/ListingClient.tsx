@@ -3,11 +3,10 @@
 import axios from "axios";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Reservation } from "@prisma/client"
 import { differenceInCalendarDays, eachDayOfInterval } from "date-fns";
 import { toast } from "react-hot-toast";
 
-import { SafeListing, SafeUser } from "@/app/types";
+import { SafeListing, SafeUser, safeReservations } from "@/app/types";
 import { categories } from "@/app/components/navbar/Categories";
 import Container from "@/app/components/Container";
 import ListingHead from "@/app/components/listings/ListingHead";
@@ -24,7 +23,7 @@ const initialDateRange = {
 };
 
 interface ListingClientProps {
-   reservations?: Reservation[];
+   reservations?: safeReservations[];
    listing: SafeListing & {
       user: SafeUser
    };
